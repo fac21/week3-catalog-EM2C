@@ -4,6 +4,18 @@
     box-sizing: border-box;
 }
 
+body::before {
+    content: "";
+    background-image: url("images/cat-bg-seamless.jpg");
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
+    z-index: -1;
+}
+
 li {
     list-style-type: none;
     display: flex;
