@@ -10,28 +10,49 @@
     <title>Catalog</title>
 </head>
 
-<body>
+<body class="">
 
-    <header>
+    <header class="">
         <img src="/images/catalog-logo.png">
     </header>
-    <main>
-        <form>
-            <label for="addList">Add a new task</label>
-            <input type="text" name="addList" id="addList">
-            <input type="submit" value="add">
-        </form>
-        <ul class="listItemsContainer">
+
+    <main class="center stack-lg">
+
+        <ul class="listItemsContainer stack-md">
+
+            <li>
+                    <label for="addList">Add a new task</label>
+                    <input type="text" name="addList" id="addList">
+                    <input type="submit" value="add">
+            </li>
+
             <li class="listItem">
                 <input type="checkbox" class="checkbox"></input>
-                <p class="task"></p>
+                <p class="task">
+                </p>
                 <i class="fa fa-trash-o" style="font-size:1rem;color:red"></i>
             </li>
+
+            <li class="listItem">
+                <input type="checkbox" class="checkbox"></input>
+                <p class="task">TEST</p>
+                <i class="fa fa-trash-o" style="font-size:1rem;color:red"></i>
+            </li>
+
+            <li class="listItem">
+                <input type="checkbox" class="checkbox"></input>
+                <p class="task">TEST</p>
+                <i class="fa fa-trash-o" style="font-size:1rem;color:red"></i>
+            </li>
+
         </ul>
+
     </main>
-    <footer>
+
+    <footer class="center">
         <p>&copy; Copyright 2021 Week3 CM2E</p>
     </footer>
+
     <script src="script.js"></script>
     <script src="testHelper.js"></script>
     <script src="tests.js"></script>
