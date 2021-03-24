@@ -12,7 +12,7 @@
 
 body {
     position: relative;
-    min-height: 75vh;
+    min-height: 100vh;
 }
 
 /* Page Background */
@@ -25,7 +25,7 @@ body::before {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.2;
+    opacity: 0.05;
     z-index: -1;
 }
 
@@ -59,7 +59,6 @@ body::before {
 
 .center {
     display: flex;
-    /* max-width: 90vw; */
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
@@ -76,12 +75,11 @@ body::before {
 /* Element Stylings */
 
 main {
-    margin-top: 200px;
+    padding-top: 200px;
 }
 
 header {
-    height: 195px;
-    background-color: rgba(0,0,0,0.3);
+    padding-left: 5%;
     width: 100vw;
     position: fixed;
     top: 0;
@@ -131,6 +129,15 @@ input.checkbox:focus{
     color: tomato;  
 }
 
+footer {
+    /* border: solid yellow; */
+    height: 2rem;
+    position: absolute;
+    bottom: 0;
+    max-width: 100vw;
+    width: 100vw;
+}
+
 /************************ media****************************/
 @media only screen and (min-width: 600px) {
     .listItem{
@@ -144,15 +151,4 @@ input.checkbox:focus{
     }
   }
 
-    justify-items: space-between;
-    /* background-color: green; */
-}
-
-footer {
-    /* border: solid yellow; */
-    position: absolute;
-    bottom: 0;
-    max-width: 100vw;
-    width: 100vw;
-}
 
