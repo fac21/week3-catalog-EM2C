@@ -19,7 +19,7 @@ function addNewTask() {
       newli.insertAdjacentHTML('beforeend', ` <input id="input${liID}" type="checkbox" class="checkbox"></input>
       <label for="input${liID}">${newtask}</label>`);
  button = document.createElement('button');
- button.setAttribute("onclick", `deletTask()`)
+ button.setAttribute("onclick", `deletTask(this)`)
     button.insertAdjacentHTML('beforeend',`<i class="fa fa-trash-o" ></i>`)
     newli.appendChild(button).classList.add("trash");
     
@@ -52,11 +52,9 @@ addnewtask.addEventListener("click", (event) => {
 //     }
     
     
-    function deletTask() {
-       
+    function deletTask(e) {
         console.log('trash')
-        let div = this.parentNode;
-         div.style.display = "none";
+        e.parentNode.parentNode.removeChild(e.parentNode);
       }
 
 
