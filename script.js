@@ -3,12 +3,13 @@ let liID = 0;
 let button;
 let input;
 let label;
+let newli;
 
 function addNewTask() {
     let newtask = document.querySelector("#addList").value;
     if (newtask) {
         let listContainer = document.querySelector('.listItemsContainer');
-        let newli = document.createElement('li');
+        newli = document.createElement('li');
         listContainer.appendChild(newli);
         newli.classList.add('listItem');
         newli.classList.add('center');
@@ -16,8 +17,8 @@ function addNewTask() {
         newli.classList.add('bord-rad');
         newli.classList.add('font-lg');
         newli.setAttribute("id", `li${liID}`);
-        console.log(newli)
-        console.log(liID)
+        //console.log(newli)
+        //console.log(liID)
         input = document.createElement('input');
         input.setAttribute("onclick", `isChecked(this)`);
         input.setAttribute("id", `input${liID}`);
@@ -46,7 +47,6 @@ addnewtask.addEventListener("click", (event) => {
 });
 
 function deletTask(e) {
-    console.log('trash')
     e.parentNode.parentNode.removeChild(e.parentNode);
 }
 

@@ -4,23 +4,43 @@
 
 test("Submitting a new task adds it to the list", () => {
     let selectInput = document.querySelector("#addList");
-   selectInput.value ="cleaning";
-   let theButton = document.querySelector("#submit");
-   theButton.click();
-   let result = label.textContect;
+    selectInput.value ="cleaning";
+    let theButton = document.querySelector("#submit");
+    theButton.click();
+    let result = label.textContent;
 
-    equal(addNewTask(), "task");
+    equal(result, "cleaning");
 });
 
-// //   Check things off my list so that I can see what I’ve done
-// test("Checking an entry marks it as complete", () => {
-//     equal(isChecked(), false);
-// });
 
-// //   Delete things from the list if I don’t need to do them anymore
-// test("Deleting an entry removes it from the list", () => {
-//     equal(deleteTask(), false);
-// });
+
+//   Check things off my list so that I can see what I’ve done
+test("Checking an entry marks it as complete", () => {
+    input.click();
+    let result = newli.getAttribute('class');
+    //console.log result givs us more then one classes
+    if (result.includes('line-through')) {
+        result = 'line-through'
+    }
+    let expected = 'line-through';
+    equal(result, expected);
+});
+
+//   Delete things from the list if I don’t need to do them anymore
+test("Deleting an entry removes it from the list", () => {
+    let expected = true;
+    
+    let listItems = document.getElementsByClassName('listItem');
+    button.click();
+
+    let listItem2 = document.getElementsByClassName('listItem');
+    console.log(listItem2);
+    let result;
+    if (listItem2.length == listItems.length - 1) {
+        result = true;
+    }
+    equal(result, expected);
+});
 
 
 
