@@ -178,7 +178,15 @@ footer {
     width: 100vw;
 }
 
+button{
 
+    width: 2rem;
+    border: none;
+    background-color: transparent;
+}
+button i{
+    width: 100%;
+}
 /************************ media****************************/
 
 @media only screen and (min-width: 768px) {
