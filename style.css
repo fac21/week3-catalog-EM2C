@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 :root{
-    --list-background-colour: #548d87;
+    --list-background-colour: rgba(47, 187, 173, 0.8);
     --list-font-family: 'Pangolin', cursive;
     --listwidth-desktop:20rem;
     --listwidth-mobile:15rem;
@@ -76,6 +76,7 @@ body::before {
 
 main {
     padding-top: 200px;
+    
 }
 
 header {
@@ -88,9 +89,14 @@ header {
 .listItemsContainer {
     display: grid;
     grid-template-rows: auto;
+    align-items: center;
 }
 
-li {
+.listItemsContainer > * + * {
+    /* height: 80px; */
+}
+
+.listItem {
     list-style-type: none;
     display: flex;
     align-items: center;
@@ -102,8 +108,33 @@ li {
     padding: 0.3rem 0.5rem;
     font-family: var(--list-font-family);
     font-size: 1.5rem;
+    min-height: 4rem;
 }
 
+.input-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,159,28,0.8);
+    border-radius: 5px;
+    width:var( --listwidth-mobile);
+    box-shadow:0 0 10px rgba(0,0,0,0.8);
+    /* max-height: 80px; */
+}
+
+input[type = text] {
+    font-family: var(--list-font-family);
+    line-height: 2.5rem;
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 1rem 0.5rem;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+}
+input[type = submit] {
+    height: 2.5rem;
+}
 
 .listItem{
     width:var( --listwidth-mobile);
@@ -139,7 +170,18 @@ footer {
 }
 
 /************************ media****************************/
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
+    
+    .listItemsContainer {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        justify-items: center;
+    }
+
+    .input-box {
+        width:var(--listwidth-desktop);
+    }
+
     .listItem{
         width:var(--listwidth-desktop);
     }
