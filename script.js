@@ -16,11 +16,8 @@ function addNewTask() {
         newli.classList.add('bord-rad');
         newli.classList.add('font-lg');
         newli.setAttribute("id", `li${liID}`);
-
         console.log(newli)
         console.log(liID)
-      newli.insertAdjacentHTML('beforeend', ` <input id="input${liID}" type="checkbox" class="checkbox"></input>
-      <label for="input${liID}">${newtask}</label>`);
         input = document.createElement('input');
         input.setAttribute("onclick", `isChecked(this)`);
         input.setAttribute("id", `input${liID}`);
@@ -39,7 +36,7 @@ function addNewTask() {
         document.querySelector("#addList").value = "";
         liID++;
     } else {
-        alert('fill the form')
+        alert('Please enter a new task')
     }
 }
 
@@ -54,5 +51,5 @@ function deletTask(e) {
 }
 
 function isChecked(e) {
-    e.nextSibling.classList.toggle('line-through');
+    e.parentNode.classList.toggle('line-through');
 }
