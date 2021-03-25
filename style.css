@@ -5,7 +5,7 @@
 }
 
 :root{
-    --list-background-colour: rgba(47, 187, 173, 0.8);
+    --list-background-colour: rgba(47, 187, 173, 1);
     --list-font-family: 'Pangolin', cursive;
     --listwidth-desktop: 20rem;
     --listwidth-mobile: 15rem;
@@ -14,6 +14,7 @@
 body {
     position: relative;
     min-height: 100vh;
+    color: rgba(1, 22, 39, 1)
 }
 
 
@@ -28,7 +29,7 @@ body::before {
     bottom: 0px;
     left: 0px;
     opacity: 0.05;
-    z-index: -1;
+    z-index: -2;
 }
 
 
@@ -68,6 +69,7 @@ body::before {
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
+    align-items: center;
 }
 
 .stack-md>*+* {
@@ -75,15 +77,36 @@ body::before {
 }
 
 .stack-lg>* {
-    margin-top: 3rem
+    margin-top: 2.5rem
+}
+
+.font-lg {
+    font-size: 1.5rem;
+}
+
+.abs-pos {
+    position: absolute;
+}
+
+.box-shadow {
+    box-shadow: 0 4px 10px rgba(50,50,50, 0.8);
+}
+
+.bord-rad {
+    border-radius: 5px;
 }
 
 
 /* Element Stylings */
 
+.header-logo {
+    height: 150px;
+}
+
 main {
-    padding-top: 200px;
-    
+    padding: 180px 0 4rem 0;
+    flex-direction: column;
+    font-family: var(--list-font-family);
 }
 
 header {
@@ -91,62 +114,50 @@ header {
     width: 100vw;
     position: fixed;
     top: 0;
+    z-index: -1;
 }
+
 
 .listItemsContainer {
     display: grid;
     grid-template-rows: auto;
-    align-items: center;
-}
-
-.listItemsContainer > * + * {
-    /* height: 80px; */
+    align-items: flex-end;
 }
 
 .listItem {
     list-style-type: none;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    /* border: 2px solid rgba(0, 0, 0, 0.55); */
-    border-radius: 5px;
     background-color: var(--list-background-colour);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     padding: 0.3rem 0.5rem;
-    font-family: var(--list-font-family);
-    font-size: 1.5rem;
     min-height: 4rem;
 }
 
-
 .input-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255,159,28,0.8);
-    border-radius: 5px;
+    background-color: rgba(255,159,28,1);
     width:var( --listwidth-mobile);
-    box-shadow:0 0 10px rgba(0,0,0,0.8);
-    /* max-height: 80px; */
 }
 
 input[type = text] {
     font-family: var(--list-font-family);
     line-height: 2.5rem;
-    font-size: 1.6rem;
     text-align: center;
     margin: 1rem 0.5rem;
-    width: 80%;
-    border-radius: 5px;
+    width: 75%;
     border: none;
 }
-input[type = submit] {
-    height: 2.5rem;
+
+button[type = submit] {
+    background: none;
+	color: rgba(67, 148, 140, 1);
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
 .listItem{
     width:var( --listwidth-mobile);
-
 }
 
 input.checkbox,
@@ -157,22 +168,18 @@ i {
     margin: 0.2rem;
 }
 
-i {
-    text-align: center;
-}
-
 i:hover {
-    color: tomato;
+    color: rgba(231, 29, 54, 1);
 }
 
 input.checkbox:focus {
-    color: tomato;
+    color: rgba(231, 29, 54, 1);
 }
 
 footer {
-    /* border: solid yellow; */
-    height: 2rem;
-    position: absolute;
+    font-style: oblique;
+    font-size: 1.1rem;
+    padding-bottom: 0.5rem;
     bottom: 0;
     max-width: 100vw;
     width: 100vw;
@@ -191,6 +198,22 @@ button i{
 
 @media only screen and (min-width: 768px) {
     
+    .stack-lg>* {
+        margin-top: 3rem
+    }
+
+    .font-lg {
+        font-size: 1.8rem;
+    }
+
+    .header-logo {
+        height: 180px;
+    }
+
+    input[type=text] {
+        width: 80%;
+    }
+
     .listItemsContainer {
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
@@ -203,10 +226,6 @@ button i{
 
     .listItem{
         width:var(--listwidth-desktop);
-    }
-  
-    li {
-        font-size: 2rem;
     }
   
     input.checkbox,

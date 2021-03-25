@@ -11,6 +11,11 @@ function addNewTask() {
         let newli = document.createElement('li');
         listContainer.appendChild(newli);
         newli.classList.add('listItem');
+        newli.classList.add('center');
+        newli.classList.add('box-shadow');
+        newli.classList.add('bord-rad');
+        newli.classList.add('font-lg');
+
         newli.setAttribute("id", `li${liID}`);
         console.log(newli)
 
@@ -18,8 +23,8 @@ function addNewTask() {
       
       newli.insertAdjacentHTML('beforeend', ` <input id="input${liID}" type="checkbox" class="checkbox"></input>
       <label for="input${liID}">${newtask}</label>`);
- button = document.createElement('button');
- button.setAttribute("onclick", `deletTask(this)`)
+    button = document.createElement('button');
+    button.setAttribute("onclick", `deletTask(this)`)
     button.insertAdjacentHTML('beforeend',`<i class="fa fa-trash-o" ></i>`)
     newli.appendChild(button).classList.add("trash");
     
