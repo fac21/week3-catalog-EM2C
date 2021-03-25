@@ -3,17 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 :root{
     --list-background-colour: rgba(47, 187, 173, 0.8);
     --list-font-family: 'Pangolin', cursive;
-    --listwidth-desktop:20rem;
-    --listwidth-mobile:15rem;
+    --listwidth-desktop: 20rem;
+    --listwidth-mobile: 15rem;
 }
 
 body {
     position: relative;
     min-height: 100vh;
 }
+
 
 /* Page Background */
 
@@ -29,31 +31,35 @@ body::before {
     z-index: -1;
 }
 
+
 /************************HIDDEN STYLE***********************/
 
-.line-through{
+.line-through {
     text-decoration: line-through;
 }
 
+
 /************************HIDDEN STYLE***********************/
+
 
 /* Colors */
 
 .color-dark {
-    color: rgba(1,22,39,1)
+    color: rgba(1, 22, 39, 1)
 }
 
 .color-blue {
-    color: rgba(46,196,182,1)
+    color: rgba(46, 196, 182, 1)
 }
 
 .color-red {
-    color: rgba(231,29,54,1)
+    color: rgba(231, 29, 54, 1)
 }
 
 .color-orange {
-    color: rgba(255,159,28,1)
+    color: rgba(255, 159, 28, 1)
 }
+
 
 /* Stack */
 
@@ -64,13 +70,14 @@ body::before {
     justify-content: center;
 }
 
-.stack-md > * + * {
+.stack-md>*+* {
     margin-top: 1rem;
 }
 
-.stack-lg > * {
+.stack-lg>* {
     margin-top: 3rem
 }
+
 
 /* Element Stylings */
 
@@ -104,12 +111,13 @@ header {
     /* border: 2px solid rgba(0, 0, 0, 0.55); */
     border-radius: 5px;
     background-color: var(--list-background-colour);
-    box-shadow:0 0 10px rgba(0,0,0,0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     padding: 0.3rem 0.5rem;
     font-family: var(--list-font-family);
     font-size: 1.5rem;
     min-height: 4rem;
 }
+
 
 .input-box {
     display: flex;
@@ -138,26 +146,27 @@ input[type = submit] {
 
 .listItem{
     width:var( --listwidth-mobile);
+
 }
 
-input.checkbox,i{
+input.checkbox,
+i {
     width: 1.5rem;
     height: 1.5rem;
     cursor: pointer;
     margin: 0.2rem;
 }
 
-i{
+i {
     text-align: center;
 }
 
-i:hover{
+i:hover {
     color: tomato;
-    
 }
 
-input.checkbox:focus{
-    color: tomato;  
+input.checkbox:focus {
+    color: tomato;
 }
 
 footer {
@@ -169,7 +178,9 @@ footer {
     width: 100vw;
 }
 
+
 /************************ media****************************/
+
 @media only screen and (min-width: 768px) {
     
     .listItemsContainer {
@@ -185,12 +196,13 @@ footer {
     .listItem{
         width:var(--listwidth-desktop);
     }
-    li{
+  
+    li {
         font-size: 2rem;
     }
-    input.checkbox,i{
+  
+    input.checkbox,
+    i {
         margin: 0.3rem;
     }
-  }
-
-
+}
