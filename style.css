@@ -101,6 +101,7 @@ body::before {
 
 .header-logo {
     height: 150px;
+    width: 200px;
 }
 
 main {
@@ -110,11 +111,15 @@ main {
 }
 
 header {
+    display: flex;
+    flex-direction: column;
     padding-left: 5%;
     width: 100vw;
     position: fixed;
     top: 0;
     z-index: -1;
+    font-family: var(--list-font-family);
+    font-size: 0.95rem;
 }
 
 
@@ -216,8 +221,20 @@ button {
         font-size: 1.8rem;
     }
 
+    header {
+        flex-direction: row;
+    }
+
+    header p {
+        font-size: 1.5rem;
+        position: absolute;
+        top: 20%;
+        right: 5%;
+    }
+
     .header-logo {
         height: 180px;
+        width: 250px;
     }
 
     input[type=text] {
