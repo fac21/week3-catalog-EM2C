@@ -1,8 +1,16 @@
-// // Core
-// // Add tasks to a list so that I can keep track of them
-// test("Submitting a new task adds it to the list", () => {
-//     equal(addNewTask(), "task");
-// });
+// Core
+// Add tasks to a list so that I can keep track of them
+// console.log(liID)
+
+test("Submitting a new task adds it to the list", () => {
+    let selectInput = document.querySelector("#addList");
+   selectInput.value ="cleaning";
+   let theButton = document.querySelector("#submit");
+   theButton.click();
+   let result = label.textContect;
+
+    equal(addNewTask(), "task");
+});
 
 // //   Check things off my list so that I can see what I’ve done
 // test("Checking an entry marks it as complete", () => {
