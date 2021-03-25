@@ -16,6 +16,8 @@ function addNewTask() {
         newli.classList.add('bord-rad');
         newli.classList.add('font-lg');
         newli.setAttribute("id", `li${liID}`);
+        console.log(newli)
+        console.log(liID)
         input = document.createElement('input');
         input.setAttribute("onclick", `isChecked(this)`);
         input.setAttribute("id", `input${liID}`);
@@ -27,12 +29,14 @@ function addNewTask() {
         newli.appendChild(label);
         button = document.createElement('button');
         button.setAttribute("onclick", `deletTask(this)`);
-        button.insertAdjacentHTML('beforeend', `<i class="fa fa-trash-o" ></i>`)
+        button.setAttribute("aria-label", `Delete the task for: ${newtask}`)
+        button.insertAdjacentHTML('beforeend', `<i class="fa fa-trash-o fa-2x" ></i>`)
         newli.appendChild(button).classList.add("trash");
+
         document.querySelector("#addList").value = "";
         liID++;
     } else {
-        alert('fill the form')
+        alert('Please enter a new task')
     }
 }
 
@@ -47,5 +51,5 @@ function deletTask(e) {
 }
 
 function isChecked(e) {
-    e.nextSibling.classList.toggle('line-through');
+    e.parentNode.classList.toggle('line-through');
 }

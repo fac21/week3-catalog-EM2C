@@ -5,7 +5,7 @@
 }
 
 :root{
-    --list-background-colour: rgba(47, 187, 173, 1);
+    --list-background-colour: rgba(46, 196, 182, 1);
     --list-font-family: 'Pangolin', cursive;
     --listwidth-desktop: 20rem;
     --listwidth-mobile: 15rem;
@@ -37,7 +37,10 @@ body::before {
 
 .line-through {
     text-decoration: line-through;
+    background-color: rgb(255, 159, 28);
+    opacity: 0.5;
 }
+
 
 
 /************************HIDDEN STYLE***********************/
@@ -101,6 +104,7 @@ body::before {
 
 .header-logo {
     height: 150px;
+    width: 200px;
 }
 
 main {
@@ -110,13 +114,26 @@ main {
 }
 
 header {
+    display: flex;
+    flex-direction: column;
     padding-left: 5%;
     width: 100vw;
     position: fixed;
     top: 0;
     z-index: -1;
+    font-family: var(--list-font-family);
+    font-size: 0.95rem;
 }
 
+.pawprints-img {
+ height: 5rem;
+ width: 2.5rem;
+ transform: rotate(55deg);
+ position: absolute;
+ right: 15%;
+ top: 25%;
+ display: none;
+}
 
 .listItemsContainer {
     display: grid;
@@ -124,12 +141,19 @@ header {
     align-items: flex-end;
 }
 
+li {
+    background-color: var(--list-background-colour);
+}
+
 .listItem {
     list-style-type: none;
     justify-content: space-between;
-    background-color: var(--list-background-colour);
     padding: 0.3rem 0.5rem;
     min-height: 4rem;
+}
+
+label {
+    padding-left: 2%;
 }
 
 .input-box {
@@ -156,6 +180,15 @@ button[type = submit] {
 	outline: inherit;
 }
 
+button[type = submit]:hover {
+    color: rgba(1, 22, 39, 1);
+    transform: scale(1.1);
+}
+
+button:active[type = submit] {
+    transform: scale(0.9);
+}
+
 .listItem{
     width:var( --listwidth-mobile);
 }
@@ -164,12 +197,12 @@ input.checkbox,
 i {
     width: 1.5rem;
     height: 1.5rem;
-    cursor: pointer;
     margin: 0.2rem;
 }
 
-i:hover {
+button:hover {
     color: rgba(231, 29, 54, 1);
+    transform: rotate(20deg) scale(1.2);
 }
 
 input.checkbox:focus {
@@ -179,24 +212,22 @@ input.checkbox:focus {
 footer {
     font-style: oblique;
     font-size: 1.1rem;
-    padding-bottom: 0.5rem;
+    padding: 0 0.5rem 0.5rem 0.5rem;
     bottom: 0;
     max-width: 100vw;
     width: 100vw;
+    text-align: center;
 }
 
-button{
-
+button {
     width: 2rem;
     border: none;
     background-color: transparent;
 }
-button i{
-    width: 100%;
-}
+
 /************************ media****************************/
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
     
     .stack-lg>* {
         margin-top: 3rem
@@ -206,8 +237,24 @@ button i{
         font-size: 1.8rem;
     }
 
+    header {
+        flex-direction: row;
+    }
+
+    header p {
+        font-size: 1.5rem;
+        position: absolute;
+        top: 20%;
+        right: 5%;
+    }
+
     .header-logo {
         height: 180px;
+        width: 250px;
+    }
+
+    .pawprints-img {
+        display: block;
     }
 
     input[type=text] {
@@ -232,4 +279,12 @@ button i{
     i {
         margin: 0.3rem;
     }
+}
+
+@media (min-width: 1201px) {
+
+    .listItemsContainer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
 }
