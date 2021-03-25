@@ -132,6 +132,10 @@ header {
     min-height: 4rem;
 }
 
+label {
+    padding-left: 2%;
+}
+
 .input-box {
     background-color: rgba(255,159,28,1);
     width:var( --listwidth-mobile);
@@ -156,6 +160,15 @@ button[type = submit] {
 	outline: inherit;
 }
 
+button[type = submit]:hover {
+    color: rgba(1, 22, 39, 1);
+    transform: scale(1.1);
+}
+
+button:active[type = submit] {
+    transform: scale(0.9);
+}
+
 .listItem{
     width:var( --listwidth-mobile);
 }
@@ -164,12 +177,12 @@ input.checkbox,
 i {
     width: 1.5rem;
     height: 1.5rem;
-    cursor: pointer;
     margin: 0.2rem;
 }
 
-i:hover {
+button:hover {
     color: rgba(231, 29, 54, 1);
+    transform: rotate(20deg) scale(1.2);
 }
 
 input.checkbox:focus {
@@ -185,15 +198,12 @@ footer {
     width: 100vw;
 }
 
-button{
-
+button {
     width: 2rem;
     border: none;
     background-color: transparent;
 }
-button i{
-    width: 100%;
-}
+
 /************************ media****************************/
 
 @media only screen and (min-width: 768px) {
