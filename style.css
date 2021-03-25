@@ -227,7 +227,7 @@ button {
 
 /************************ media****************************/
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
     
     .stack-lg>* {
         margin-top: 3rem
@@ -279,4 +279,12 @@ button {
     i {
         margin: 0.3rem;
     }
+}
+
+@media (min-width: 1201px) {
+
+    .listItemsContainer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
 }
