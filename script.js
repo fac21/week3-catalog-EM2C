@@ -1,3 +1,4 @@
+
 const newtask= document.querySelector("#addList").value;
 const addnewtask= document.querySelector("#submit");
 function addNewTask(){
@@ -20,3 +21,15 @@ addnewtask.addEventListener("click", (event) => {
     event.preventDefault();
     addNewTask();
 });
+
+const task = document.querySelector()
+
+
+function isChecked() {
+    return true;
+}
+
+function deleteTask() {
+    return true;
+}
+
