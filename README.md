@@ -4,6 +4,8 @@
 
 Evgeny, Maryam, Mariya, Craig
 
+![](images/project.png)
+
 ### User: Maryam
 Championing the user stories to ensure that your product meets the users’ needs.
 ### Deployment: Evgeny
@@ -26,4 +28,4 @@ Ensuring a smooth process and good communication.
 We wanted our To-do tracker to look nice so it will be always a plesure to use it, so we put a lot of effort designing and styling it.
 
 We used seamless  images for the background which made it look nice and smother.
-Used grid, so on wider screen the tasks added have two column layout.smother
+Used grid, so on wider screen the tasks added have two column layout.
