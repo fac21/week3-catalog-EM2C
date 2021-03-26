@@ -103,12 +103,12 @@ body::before {
 /* Element Stylings */
 
 .header-logo {
-    height: 150px;
-    width: 200px;
+    height: 100px;
+    width: 140px;
 }
 
 main {
-    padding: 180px 0 4rem 0;
+    padding: 120px 0 4rem 0;
     flex-direction: column;
     font-family: var(--list-font-family);
 }
@@ -122,7 +122,11 @@ header {
     top: 0;
     z-index: -1;
     font-family: var(--list-font-family);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+}
+
+header p {
+    display: none;
 }
 
 .pawprints-img {
@@ -150,6 +154,12 @@ li {
     justify-content: space-between;
     padding: 0.3rem 0.5rem;
     min-height: 4rem;
+}
+
+.listItem label {
+    width: 100%;
+    text-align: center;
+    overflow: scroll;
 }
 
 label {
@@ -237,24 +247,18 @@ button {
         font-size: 1.8rem;
     }
 
-    header {
-        flex-direction: row;
-    }
-
     header p {
-        font-size: 1.5rem;
-        position: absolute;
-        top: 20%;
-        right: 5%;
+        font-size: 0.85rem;
+        display: block;
     }
 
     .header-logo {
-        height: 180px;
-        width: 250px;
+        height: 130px;
+        width: 180px;
     }
 
-    .pawprints-img {
-        display: block;
+    main {
+        padding: 150px 0 4rem 0;
     }
 
     input[type=text] {
@@ -282,6 +286,31 @@ button {
 }
 
 @media (min-width: 1201px) {
+
+    header {
+        flex-direction: row;
+    }
+
+    header p {
+        font-size: 1.5rem;
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        display: block;
+    }
+
+    .header-logo {
+        height: 160px;
+        width: 220px;
+    }
+
+    .pawprints-img {
+        display: block;
+    }
+
+    main {
+        padding: 180px 0 4rem 0;
+    }
 
     .listItemsContainer {
         grid-template-columns: 1fr 1fr 1fr;
