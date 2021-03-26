@@ -17,12 +17,8 @@ test("Submitting a new task adds it to the list", () => {
 //   Check things off my list so that I can see what I’ve done
 test("Checking an entry marks it as complete", () => {
     input.click();
-    let result = newli.getAttribute('class');
-    //console.log result givs us more then one classes
-    if (result.includes('line-through')) {
-        result = 'line-through'
-    }
-    let expected = 'line-through';
+    let result = newli.classList.contains('line-through');
+    let expected = true;
     equal(result, expected);
 });
 
